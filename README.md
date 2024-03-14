@@ -25,6 +25,9 @@
   <img src = "images/API15.png">
   <img src = "images/API16.png">
   <img src = "images/API17.png">
+
+  <Strong><Li>Tampilan Output Open API</Li></Strong>
+  <img src = "images/Result1.jpeg">
   
   <Strong><Li>Penjelasan Source Code</Li></Strong>
 </ol>
