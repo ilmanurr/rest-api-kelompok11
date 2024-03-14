@@ -28,7 +28,7 @@
   
   <Strong><Li>Penjelasan Source Code</Li></Strong>
 </ol>
-  <img src = "API1.png">
+  <img src = "images/API1.png">
 <br>"openapi": "3.0.3": berfungsi untuk mendefinisikan versi OpenAPI yang digunakan dalam spesifikasi ini.
 <br>"info": berfungsi untuk memberikan informasi metadata tentang API. Bagian yang termasuk dalam metadata API adalah judul, versi, deskripsi, alamat situs web untuk syarat dan ketentuan penggunaan, informasi kontak, dan lisensi. 
 <br>"title" untuk mendefinisikan Judul API.
