@@ -8,8 +8,8 @@
 <br>
 <ol type = "a">
   <Strong><Li>Source Code</Li></Strong>
-  <img src = "API1.png">
-  <img src = "API2.png">
+  <img src = "API1.png width = "200">
+  <img src = "API2.png" width = "200">
   <img src = "API3.png">
   <img src = "API4.png">
   <img src = "API5.png">
