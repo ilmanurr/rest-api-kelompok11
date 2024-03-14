@@ -1,0 +1,445 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Data Villages Management RESTful API",
+      "version": "1",
+      "description": "OpenAPI for Data Villages Management RESTful API by Kelompok 11 MI2022B",
+      "termsOfService": "https://www.restful-api-desa-kelompok11.com",
+      "contact": {
+        "name": "Kelompok 11 MI2022B",
+        "email": "kelompok11@gmail.com",
+        "url": "https://github.com/ilmanurr/rest-api-kelompok11"
+      },
+      "license": {
+        "name": "Apache License 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0"
+      }
+    },
+    "servers": [
+      {
+        "description": "Data Villages Management RESTful API Server",
+        "url": "http://localhost:8080/{environment}.desa/",
+        "variables": {
+          "environment": {
+            "description": "Server Environment",
+            "default": "dev",
+            "enum": [
+              "development",
+              "production",
+              "staging"
+            ]
+          }
+        }
+      }
+    ],
+    "externalDocs": {
+      "description": "GitHub Kelompok 11",
+      "url": "https://github.com/ilmanurr/rest-api-kelompok11"
+    },
+    "paths": {
+      "/desa": {
+        "get": {
+          "security": [
+            {
+              "DataVillagestAuth": []
+            }
+          ],
+          "tags": [
+            "Data Villages"
+          ],
+          "summary": "Get all Data Villages",
+          "description": "Get all data villages by default",
+          "parameters": [
+            {
+              "name": "include_deleted",
+              "in": "query",
+              "required": false,
+              "description": "Include deleted data desa in the result",
+              "schema": {
+                "type": "boolean",
+                "nullable": true,
+                "default": false
+              }
+            },
+            {
+              "name": "name",
+              "in": "query",
+              "required": false,
+              "description": "Filter data villages by name",
+              "schema": {
+                "type": "string",
+                "nullable": true,
+                "minLength": 1,
+                "maxLength": 100
+              },
+              "examples": {
+                "java": {
+                  "description": "Example name Java",
+                  "value": "Java"
+                },
+                "php": {
+                  "description": "Example name PHP",
+                  "value": "PHP"
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success get all data villages",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ArrayDataVillages"
+                  },
+                  "examples": {
+                    "success": {
+                      "description": "Example success get all data village",
+                      "value": [
+                        {
+                          "id": "1",
+                          "name": "Java",
+                          "priority": 3,
+                          "tags": [
+                            "Java",
+                            "Programming"
+                          ]
+                        },
+                        {
+                          "id": "2",
+                          "name": "PHP",
+                          "priority": 5,
+                          "tags": [
+                            "PHP",
+                            "Programming"
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "post": {
+          "security": [
+            {
+              "DataVillagestAuth": []
+            }
+          ],
+          "tags": [
+            "Data Villages"
+          ],
+          "summary": "Create new data village",
+          "description": "Create new data village to database",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrUpdateDataVillages"
+                },
+                "examples": {
+                  "java": {
+                    "description": "Example create data village Java",
+                    "value": {
+                      "name": "Java",
+                      "priority": 3,
+                      "tags": [
+                        "Java",
+                        "Programming"
+                      ]
+                    }
+                  },
+                  "php": {
+                    "description": "Example create data village PHP",
+                    "value": {
+                      "name": "PHP",
+                      "priority": 5,
+                      "tags": [
+                        "PHP",
+                        "Programming"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success create data village",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DataVillages"
+                  },
+                  "examples": {
+                    "java": {
+                      "description": "Success create java data village",
+                      "value": {
+                        "id": "1",
+                        "name": "Java",
+                        "priority": 3,
+                        "tags": [
+                          "Java",
+                          "Programming"
+                        ]
+                      }
+                    },
+                    "php": {
+                      "description": "Success create php data village",
+                      "value": {
+                        "id": "2",
+                        "name": "PHP",
+                        "priority": 5,
+                        "tags": [
+                          "PHP",
+                          "Programming"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/desa/{desaId}": {
+        "put": {
+          "security": [
+            {
+              "DataVillagestAuth": []
+            }
+          ],
+          "tags": [
+            "Data Villages"
+          ],
+          "summary": "Update existing data villages",
+          "description": "Update existing data village in database",
+          "parameters": [
+            {
+              "$ref": "#/components/parameters/DataVillagesId"
+            }
+          ],
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CreateOrUpdateDataVillages"
+                },
+                "examples": {
+                  "java": {
+                    "description": "Example create data village Java",
+                    "value": {
+                      "name": "Java",
+                      "priority": 3,
+                      "tags": [
+                        "Java",
+                        "Programming"
+                      ]
+                    }
+                  },
+                  "php": {
+                    "description": "Example create data village PHP",
+                    "value": {
+                      "name": "PHP",
+                      "priority": 5,
+                      "tags": [
+                        "PHP",
+                        "Programming"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success update data village",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DataVillages"
+                  },
+                  "examples": {
+                    "java": {
+                      "description": "Success create java data village",
+                      "value": {
+                        "id": "1",
+                        "name": "Java",
+                        "priority": 3,
+                        "tags": [
+                          "Java",
+                          "Programming"
+                        ]
+                      }
+                    },
+                    "php": {
+                      "description": "Success create php data village",
+                      "value": {
+                        "id": "2",
+                        "name": "PHP",
+                        "priority": 5,
+                        "tags": [
+                          "PHP",
+                          "Programming"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "delete": {
+          "security": [
+            {
+              "DataVillagestAuth": []
+            }
+          ],
+          "tags": [
+            "Data Villages"
+          ],
+          "summary": "Delete existing data village",
+          "description": "Delete existing data village in database",
+          "parameters": [
+            {
+              "$ref": "#/components/parameters/DataVillagesId"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success delete data village",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "success": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "examples": {
+                    "success": {
+                      "description": "Success delete data village",
+                      "value": {
+                        "success": true
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Failed delete not found data village",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "success": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "examples": {
+                    "failed": {
+                      "description": "Failed delete data village",
+                      "value": {
+                        "success": false
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes": {
+        "DataVillagestAuth": {
+          "description": "Authentication for Data Villages Management RESTful API",
+          "type": "apiKey",
+          "in": "header",
+          "name": "X-API-Key"
+        }
+      },
+      "parameters": {
+        "DataVillagesId": {
+          "name": "desaId",
+          "in": "path",
+          "required": true,
+          "description": "Data villages id for updated",
+          "schema": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "examples": {
+            "java": {
+              "description": "Sample village id for Java",
+              "value": "1"
+            },
+            "php": {
+              "description": "Sample village id for PHP",
+              "value": "2"
+            }
+          }
+        }
+      },
+      "schemas": {
+        "DataVillages": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "CreateOrUpdateDataVillages": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "ArrayDataVillages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/DataVillages"
+          }
+        }
+      }
+    }
+  }
