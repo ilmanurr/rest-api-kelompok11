@@ -28,6 +28,16 @@
 
   <Strong><Li>Tampilan Output Open API</Li></Strong>
   <img src = "images/Result1.jpeg">
+  <img src = "images/Result2.jpeg">
+  <img src = "images/Result3.jpeg">
+  <img src = "images/Result4.jpeg">
+  <img src = "images/Result5.jpeg">
+  <img src = "images/Result6.jpeg">
+  <img src = "images/Result7.jpeg">
+  <img src = "images/Result8.jpeg">
+  <img src = "images/Result9.jpeg">
+  <img src = "images/Result11.jpeg">
+  <img src = "images/Result12.jpeg">
   
   <Strong><Li>Penjelasan Source Code</Li></Strong>
 </ol>
