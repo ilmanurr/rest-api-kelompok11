@@ -37,11 +37,12 @@
 <br>"termsOfService": untuk mendefinisikan URL yang mengarah ke syarat dan ketentuan penggunaan API.
 <br>"contact": untuk memberikan informasi kontak tim pengembang API, termasuk nama, alamat email, dan URL GitHub.
 <br>"license": untuk memberikan informasi tentang lisensi API, termasuk nama dan URL lisensi.
-<p>"servers": untuk menentukan server atau lingkungan dimana API dapat diakses.</p>
+<p>
+"servers": untuk menentukan server atau lingkungan dimana API dapat diakses.
 <br>"description": description pada server ini berfungsi untuk mendeskripsikan server.
 "url": URL dasar API. {environment} adalah variabel yang harus diganti dengan nilai dari lingkungan (misalnya: development, production, staging).
 "variables": Variabel yang dapat digunakan dalam URL. Dalam kasus ini, hanya ada satu variabel yaitu "environment" yang dapat memiliki nilai dari "development", "production", atau "staging".
-
+</p>
   
   
 
