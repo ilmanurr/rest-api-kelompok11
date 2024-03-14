@@ -25,8 +25,6 @@
   <img src = "API15.png">
   <img src = "API16.png">
   <img src = "API17.png">
-  <img src = "API18.png">
-  <img src = "API19.png">
   
   <Strong><Li>Penjelasan Source Code</Li></Strong>
 </ol>
