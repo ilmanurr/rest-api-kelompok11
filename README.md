@@ -8,7 +8,7 @@
 <br>
 <ol type = "a">
   <Strong><Li>Source Code</Li></Strong>
-  <img.src = "API1.png">
+  <img src = "API1.png">
   
   <Strong><Li>Penjelasan Source Code</Li></Strong>
 </ol>
