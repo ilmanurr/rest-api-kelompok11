@@ -99,7 +99,7 @@
                         {
                           "id": "1",
                           "name": "Java",
-                          "priority": 3,
+                          "address": "Surabaya",
                           "tags": [
                             "Java",
                             "Programming"
@@ -108,7 +108,7 @@
                         {
                           "id": "2",
                           "name": "PHP",
-                          "priority": 5,
+                          "Address": "Surabaya",
                           "tags": [
                             "PHP",
                             "Programming"
@@ -145,7 +145,7 @@
                     "description": "Example create data village Java",
                     "value": {
                       "name": "Java",
-                      "priority": 3,
+                      "address": "Jakarta",
                       "tags": [
                         "Java",
                         "Programming"
@@ -156,7 +156,7 @@
                     "description": "Example create data village PHP",
                     "value": {
                       "name": "PHP",
-                      "priority": 5,
+                      "address": "Jakarta",
                       "tags": [
                         "PHP",
                         "Programming"
@@ -181,7 +181,7 @@
                       "value": {
                         "id": "1",
                         "name": "Java",
-                        "priority": 3,
+                        "address": "Bandung",
                         "tags": [
                           "Java",
                           "Programming"
@@ -193,7 +193,7 @@
                       "value": {
                         "id": "2",
                         "name": "PHP",
-                        "priority": 5,
+                        "address": "Bandung",
                         "tags": [
                           "PHP",
                           "Programming"
@@ -236,7 +236,7 @@
                     "description": "Example create data village Java",
                     "value": {
                       "name": "Java",
-                      "priority": 3,
+                      "address": "Medan",
                       "tags": [
                         "Java",
                         "Programming"
@@ -247,7 +247,7 @@
                     "description": "Example create data village PHP",
                     "value": {
                       "name": "PHP",
-                      "priority": 5,
+                      "address": "Medan",
                       "tags": [
                         "PHP",
                         "Programming"
@@ -272,7 +272,7 @@
                       "value": {
                         "id": "1",
                         "name": "Java",
-                        "priority": 3,
+                        "address": "malang",
                         "tags": [
                           "Java",
                           "Programming"
@@ -284,7 +284,7 @@
                       "value": {
                         "id": "2",
                         "name": "PHP",
-                        "priority": 5,
+                        "address": "Malang",
                         "tags": [
                           "PHP",
                           "Programming"
